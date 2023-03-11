@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bootstrap Assignment 1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+    <script src='main.js'></script>
+    <style>
+        .colstyle{
+           border:1px solid black;
+        }
+        
+        table.table-bordered{
+            border:1px solid red;
+            margin-top:20px;
+        }
+        table.table-bordered > thead > tr > th{
+            border:1px solid red;
+        }
+        table.table-bordered > tbody > tr > td{
+            border:1px solid red;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col colstyle">
+                <h1 class="text-center">FORM</h1>
+            </div>
+            <div class="col colstyle" >
+                <h1 class="text-center">TABLE</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col colstyle">
+                <form action="" method="post" style="background-color: aquamarine ; padding: 20px;">
+                    <div class="mb-3">
+                        <label for="nm">Name:</label>
+                        <input type="text" id="nm" class="form-control form-control-lg" required >
+                    </div>
+                    <div class="mb-3">
+                        <label for="num">Phone no.:</label>
+                        <input type="tel" id="num" pattern="[0-9]{10}" class="form-control form-control-lg" required >
+                    </div>
+                    <div class="mb-3">
+                        <label for="dob">Date:</label>
+                        <input type="date" id="dob" class="form-control form-control-lg" required  >
+                    </div>
+                    <div class="mb-3">
+                        <label for="address">Address:</label>
+                        <textarea id="address" class="form-control input-lg" rows="4" col="10" required ></textarea>
+                    </div>
+                    <div class="mb-3">
+                    Gender:
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="Gender" id="Male">
+                        <label class="form-check-label" for="Male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="Gender" id="Female">
+                        <label class="form-check-label" for="Female">Female</label>
+                    </div>
+                    </div>
+                    <label for="city">City:</label>
+                    <select class="form-select mb-3" aria-label="Default select example" id="city" name="city" required>
+                        <option selected>Select City</option>
+                        <option value="Bareilly">Bareilly</option>
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Noida">Noida</option>
+                        <option value="Gurgaon">Gurgaon</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                      </select>
+                      <div class="mb-3">
+                        Hobbies:
+                    <div class="form-check">
+
+                        <input type="checkbox" class="form-check-input" name="Hobbies" id="Hobby1">
+                        <label class="form-check-label" for="Hobby1">Reading</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" name="Hobbies" id="Hobby2">
+                        <label class="form-check-label" for="Hobby2">Gardening</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="Hobbies" id="Hobby3">
+                        <label class="form-check-label" for="Hobby3">Cooking</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" name="Hobbies" id="Hobby4">
+                        <label class="form-check-label" for="Hobby4">Music</label>
+                    </div>
+                 </div>
+                 <input class="btn btn-primary" type="submit" value="Submit">
+                 <input class="btn btn-primary" type="reset" value="Reset">
+                </form>
+            </div>
+            <div class="col colstyle">
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">S.No.</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Phone No.</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">DOB</th>
+                                <th scope="col">Interests</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-primary">
+                                <td>1</td>
+                                <td>Mini</td>
+                                <td>9698672345</td>
+                                <td>Female</td>
+                                <td>12/2/2001</td>
+                                <td>
+                                    <ul style="list-style:none">
+                                        <li>Reading</li>
+                                        <li>Music</li>
+                                        <li>Sports</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="table-active">
+                                <td>2</td>
+                                <td>Raj</td>
+                                <td>873456235</td>
+                                <td>Male</td>
+                                <td>2/12/2005</td>
+                                <td>
+                                    <ul style="list-style:none">
+                                        <li>Cooking</li>
+                                        <li>Gardening</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
